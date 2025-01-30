@@ -132,6 +132,15 @@ namespace Oqtane.Modules
             return PageState?.Alias.BaseUrl + "/Modules/" + GetType().Namespace + "/";
         }
 
+        // fingerprint hash code for static assets
+        public string Fingerprint
+        {
+            get
+            {
+                return ModuleState.ModuleDefinition.Fingerprint;
+            }
+        }
+
         // url methods
 
         // navigate url
